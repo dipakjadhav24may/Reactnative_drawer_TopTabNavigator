@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, Button,Platform, StyleSheet } from 'react-native';
+import { View, Text, Button, Platform, StyleSheet } from 'react-native';
 
 export class Settings extends Component {
-render() {
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.heading}>
-          Home
+          Setting
         </Text>
       </View>
     );

@@ -6,7 +6,7 @@ export class Account extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.heading}>
-          Home
+          Account
         </Text>
       </View>
     );

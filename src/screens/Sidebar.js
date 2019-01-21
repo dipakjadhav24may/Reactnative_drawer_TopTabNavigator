@@ -26,13 +26,13 @@ class Sidebar extends Component {
               </Text>
             </View>
             <View style={styles.menuItem}>
-              <Text onPress={this.navigateToScreen('Setting')}>
-                Setting
+              <Text onPress={this.navigateToScreen('Settings')}>
+                Settings
               </Text>
             </View>
             <View style={styles.menuItem}>
-              <Text onPress={this.navigateToScreen('About')}>
-                About
+              <Text onPress={this.navigateToScreen('Account')}>
+                Account
               </Text>
             </View>
           </View>
