@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { createStackNavigator, createDrawerNavigator, createMaterialTopTabNavigator } from 'react-navigation';
+import {
+  createStackNavigator,
+  createDrawerNavigator,
+  createMaterialTopTabNavigator,
+  createMaterialBottomTabNavigator,
+  createTabNavigator,
+  createBottomTabNavigator
+} from 'react-navigation';
 import { DrawerActions } from 'react-navigation';
 import { View, Text, StyleSheet, Platform, TouchableOpacity, Image, StatusBar } from 'react-native';
 
@@ -9,7 +16,24 @@ import Home from '../screens/Home';
 import Account from '../screens/Account';
 import Sidebar from '../screens/Sidebar';
 
-const Tabs = createMaterialTopTabNavigator({
+// const Tabs = createTopTabNavigator({
+//   Home: Home,
+//   Settings: Settings,
+//   Account: Account
+// }, {
+//     tabBarOptions: {
+//       activeTintColor: '#000',
+//       inactiveTintColor: 'gray',
+//       style: {
+//         backgroundColor: '#fff',
+//       },
+//       indicatorStyle: {
+//         backgroundColor: '#000',
+//       },
+//     }
+//   });
+
+const Tabs = createBottomTabNavigator({
   Home: Home,
   Settings: Settings,
   Account: Account
@@ -41,7 +65,7 @@ const DrawerNavigator = createDrawerNavigator({
 
 const MenuImage = ({ navigation }) => {
   if (!navigation.state.isDrawerOpen) {
-    return <Image style={{marginLeft:10}} source={require('../images/menu-button.png')} />
+    return <Image style={{ marginLeft: 10 }} source={require('../images/menu-button.png')} />
   } else {
     return <Image source={require('../images/left-arrow.png')} />
   }
@@ -70,7 +94,7 @@ const StackNavigator = createStackNavigator({
     })
   });
 
-  export default StackNavigator
+export default StackNavigator
 
 // const App111 = createAppContainer(StackNavigator);
 
