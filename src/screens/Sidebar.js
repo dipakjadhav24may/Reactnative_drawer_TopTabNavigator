@@ -35,6 +35,11 @@ class Sidebar extends Component {
                 Account
               </Text>
             </View>
+              <View style={styles.menuItem}>
+              <Text onPress={this.navigateToScreen('Profile')}>
+                My Profile
+              </Text>
+            </View>
           </View>
         </ScrollView>
       </View>

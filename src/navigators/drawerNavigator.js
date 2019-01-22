@@ -14,9 +14,10 @@ import { View, Text, StyleSheet, Platform, TouchableOpacity, Image, StatusBar } 
 import Settings from '../screens/Settings';
 import Home from '../screens/Home';
 import Account from '../screens/Account';
+import Profile from '../screens/Profile';
 import Sidebar from '../screens/Sidebar';
 
-// const Tabs = createTopTabNavigator({
+// const Tabs = createTabNavigator({
 //   Home: Home,
 //   Settings: Settings,
 //   Account: Account
@@ -54,7 +55,7 @@ const Tabs = createBottomTabNavigator({
 const DrawerNavigator = createDrawerNavigator({
   Home: {
     screen: Tabs
-  }
+  },  
 },
   {
     initialRouteName: 'Home',
@@ -68,7 +69,7 @@ const MenuImage = ({ navigation }) => {
   if (!navigation.state.isDrawerOpen) {
     return <Image style={{ marginLeft: 10 }} source={require('../images/menu-button.png')} />
   } else {
-    return <Image source={require('../images/left-arrow.png')} />
+    return <Image style={{ marginLeft: 10 }} source={require('../images/left-arrow.png')} />
   }
 }
 
@@ -81,6 +82,9 @@ const StackNavigator = createStackNavigator({
 
   DrawerNavigator: {
     screen: DrawerNavigator
+  },
+   Profile: {
+    screen: Profile
   }
 }, {
     navigationOptions: ({ navigation }) => ({
