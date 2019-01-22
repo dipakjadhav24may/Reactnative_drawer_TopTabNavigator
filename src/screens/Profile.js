@@ -23,6 +23,7 @@ export class Profile extends Component {
     return (
       <View style={[styles.container]}>
         <Button
+          onPress={() => console.log("Button click")}
           style={[styles.buttonStyle]}
           title="Go to Jane's profile"
         />
