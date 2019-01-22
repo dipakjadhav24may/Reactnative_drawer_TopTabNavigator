@@ -55,7 +55,8 @@ const DrawerNavigator = createDrawerNavigator({
   Home: {
     screen: Tabs
   }
-}, {
+},
+  {
     initialRouteName: 'Home',
     contentComponent: Sidebar,
     drawerWidth: 300
@@ -72,6 +73,11 @@ const MenuImage = ({ navigation }) => {
 }
 
 const StackNavigator = createStackNavigator({
+
+  //TO add only tabs no drawe
+  //  DrawerNavigator: {
+  //   screen: Tabs
+  // }
 
   DrawerNavigator: {
     screen: DrawerNavigator
@@ -96,6 +102,5 @@ const StackNavigator = createStackNavigator({
 
 export default StackNavigator
 
-// const App111 = createAppContainer(StackNavigator);
 
-// export default App111;
+
