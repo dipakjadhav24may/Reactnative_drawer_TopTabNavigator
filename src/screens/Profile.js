@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Button, Platform, StyleSheet, Image } from 'react-native';
-
+import { HeaderBackButton } from 'react-navigation';
 export class Profile extends Component {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     title: 'Welcome',
     headerLeft:
-    <TouchableOpacity>
+    //  <TouchableOpacity onPress={() => navigation.navigate('Account')}>   //on back press send to account 
+    <TouchableOpacity onPress={() => navigation.goBack(null)}>
       <Image style={{ marginLeft: 10 }} source={require('../images/left-arrow.png')} />
     </TouchableOpacity>,
     headerStyle: {
@@ -15,13 +16,17 @@ export class Profile extends Component {
     headerTitleStyle: {
       fontWeight: 'bold',
     },
-  };
+  });
+
+
   render() {
     return (
-      <Button
-        style={[styles.buttonStyle]}
-        title="Go to Jane's profile"
-      />
+      <View style={[styles.container]}>
+        <Button
+          style={[styles.buttonStyle]}
+          title="Go to Jane's profile"
+        />
+      </View>
     );
   }
 }

@@ -55,7 +55,7 @@ const Tabs = createBottomTabNavigator({
 const DrawerNavigator = createDrawerNavigator({
   Home: {
     screen: Tabs
-  },  
+  }, 
 },
   {
     initialRouteName: 'Home',
@@ -86,6 +86,7 @@ const StackNavigator = createStackNavigator({
    Profile: {
     screen: Profile
   }
+
 }, {
     navigationOptions: ({ navigation }) => ({
       title: 'My App',  // Title to appear in status bar
